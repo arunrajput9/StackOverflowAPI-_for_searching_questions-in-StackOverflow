@@ -27,6 +27,7 @@ def back(request):
     global count,time_first_search_min,time_next_search
     count+=1
     if time_first_search_min==0 or count>6:
+        count=0
         time_first_search_min=datetime.datetime.today()
         time_next_search=time_first_search_min+datetime.timedelta(minutes=1)
     if count==6 and datetime.datetime.today()<time_next_search:
