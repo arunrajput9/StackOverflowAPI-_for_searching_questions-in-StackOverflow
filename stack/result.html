@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>result</title>
+</head>
+<style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+li {
+  background: #ff9999;
+  padding: 5px;
+  margin-left: 35px;
+  }
+
+p {
+  background-color: white;
+  color: blue;
+}
+
+body {
+    color: grey;
+}
+</style>
+<body>
+    <form action = "back">
+        {% csrf_token %}
+        <input type="submit" class="button" value="Search Next Question" align="center">
+    </form>
+    {% for key in result %}
+    <tr>
+        <li font size=13 face=helvetica> {{key.title}} </li>
+        <p> {{key.body}}</p>
+    </tr>
+    {% endfor %}
+
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+ <html>
+            <body onload="setTimeout(showStuff, {{times}})">
+
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div align=center>
+                    <font size=13 face=helvetica> You're doing that too much. </font><br> <br> <br>
+                    <font size=5 face=helvetica>
+                    You have exceed the prescribed limit please try after {{time_in_sec}} <br>
+                    <br><br>
+                    <br><br>
+                    Click below "Search Question" button to go back to the home page button will appear after above mention time <br> <br>
+                    </font>
+                    <p id="Button">
+                       <input type=submit onclick=myFunction() value="Search Question"> </p>
+
+
+              <script>
+
+                    document.getElementById("Button").style.display= "none";
+
+                    function showStuff(){
+                        document.getElementById("Button").style.display = "inline";
+                    }
+
+                    function myFunction() {
+                        window.location = 'back',views.back,name='back'
+                    }
+
+
+                    </script>
+            </body>
+        </html>

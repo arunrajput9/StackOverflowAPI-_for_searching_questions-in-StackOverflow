@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.form {
+	background-color: white;
+	 border-color: black
+	 color: black;
+	 padding: 15px 32px;
+	 text-align: center;
+	 text-decoration: none;
+	 display: inline-block;
+	 font-size: 16px;
+	 margin: 4px 2px;
+	 cursor: pointer;
+
+
+
+</style>
+<body>
+<form action = "search">
+	{% csrf_token %}
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<div align=center>
+		<font size=13 face=helvetica> Enter Question to search :<input type="text" name="question" class="form"<br>
+			<input type="submit" class="button" value="Submit"> </font><br> <br> <br>
+</form>
+
+
+</body>
+</html>
